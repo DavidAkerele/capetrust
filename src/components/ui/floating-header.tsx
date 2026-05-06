@@ -21,10 +21,11 @@ export function FloatingHeader() {
 	}, []);
 
 	const links = [
-		{ label: 'Find a Location', href: '#locations' },
-		{ label: 'Planning Ahead', href: '#planning' },
-		{ label: 'Services', href: '#services' },
-		{ label: 'About Us', href: '#about' },
+		{ label: 'About', href: '#about' },
+		{ label: 'Investment', href: '#investment' },
+		{ label: 'Products', href: '#products' },
+		{ label: 'FAQ', href: '#faq' },
+		{ label: 'Contact', href: '#contact' },
 	];
 
 	return (

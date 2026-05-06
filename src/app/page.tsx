@@ -1,9 +1,10 @@
 import { FloatingHeader } from "@/components/ui/floating-header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Planning from "@/components/Planning";
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
+import Investment from "@/components/Investment";
+import Products from "@/components/Products";
+import FAQ from "@/components/FAQ";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -11,10 +12,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <FloatingHeader />
       <Hero />
-      <Services />
-      <Planning />
-      <Testimonials />
       <About />
+      <Investment />
+      <Products />
+      <FAQ />
+      <Contact />
       <Footer />
     </main>
   );
