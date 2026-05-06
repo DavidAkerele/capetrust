@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import legacyImg from "../../public/images/jacinta-christos-pJ8WXG5C_5U-unsplash.jpg";
 
 export default function About() {
   return (
@@ -9,44 +11,46 @@ export default function About() {
         <div className="relative flex flex-col lg:flex-row items-center">
           
           {/* Left: Massive Edge-to-Edge Image */}
-          <div className="w-full lg:w-2/3 h-[500px] lg:h-[700px] relative rounded-2xl overflow-hidden shadow-2xl z-0 group">
+          <div className="w-full lg:w-2/3 h-[500px] lg:h-[700px] relative rounded-[2.5rem] overflow-hidden shadow-2xl z-0 group">
             <Image 
-              src="/images/jacinta-christos-pJ8WXG5C_5U-unsplash.jpg"
+              src={legacyImg}
               alt="Capetrust Legacy"
               fill
+              placeholder="blur"
+              sizes="(max-width: 1024px) 100vw, 66vw"
               className="object-cover transition-transform duration-[2000ms] group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[var(--color-primary)]/10"></div>
+            <div className="absolute inset-0 bg-blue-900/10"></div>
           </div>
 
           {/* Right: Overlapping Glassmorphism Card */}
           <div className="w-full lg:w-1/2 relative z-10 lg:-ml-32 mt-[-100px] lg:mt-0">
-            <div className="bg-white/95 supports-[backdrop-filter]:bg-white/80 backdrop-blur-xl p-10 md:p-16 shadow-2xl rounded-2xl border border-[var(--color-primary)]/5">
+            <div className="bg-white/95 supports-[backdrop-filter]:bg-white/80 backdrop-blur-xl p-10 md:p-16 shadow-2xl rounded-[2.5rem] border border-[var(--color-primary)]/5">
               
               <div className="flex items-center space-x-4 mb-10">
-                <div className="w-12 h-[2px] bg-[var(--color-secondary)]"></div>
-                <span className="text-[var(--color-secondary)] text-xs font-bold uppercase tracking-[0.15em]">
+                <div className="w-12 h-[1px] bg-[var(--color-secondary)]"></div>
+                <span className="text-[var(--color-secondary)] text-[10px] font-bold uppercase tracking-[0.25em]">
                   Our Legacy
                 </span>
               </div>
 
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-[var(--color-primary)] font-bold mb-8 leading-[1.1]">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-[var(--color-primary)] font-bold mb-6 leading-[1.15] italic">
                 Honoring Life,<br /> Celebrating Legacy.
               </h2>
 
-              <div className="space-y-6 text-gray-600 font-light leading-relaxed text-lg mb-10">
+              <div className="space-y-5 text-gray-600 font-light leading-relaxed text-base mb-8">
                 <p>
-                  At Capetrust Funeral Services, we understand that saying goodbye is one of life's most profound moments. As a proud Nigerian institution rooted deeply in Lagos, we have dedicated ourselves to providing compassionate, dignified care to families, with a special focus on our vibrant community in Ikorodu.
+                  At Capetrust Funeral Services, we understand that saying goodbye is one of life&apos;s most profound moments. As a proud Nigerian institution rooted deeply in Lagos, we have dedicated ourselves to providing compassionate, dignified care to families.
                 </p>
                 <p>
-                  Our experienced team handles every detail with the utmost reverence—from deeply traditional Nigerian ceremonies to contemporary memorial services—ensuring your loved ones receive a farewell that beautifully reflects the life they lived.
+                  Our experienced team handles every detail with the utmost reverence—ensuring your loved ones receive a farewell that beautifully reflects the life they lived.
                 </p>
               </div>
 
-              <button className="text-[var(--color-secondary)] hover:text-[var(--color-primary)] font-bold text-sm uppercase tracking-widest flex items-center transition-colors duration-300 group">
+              <Link href="/about" className="inline-flex items-center justify-center bg-[var(--color-primary)] hover:bg-[var(--color-secondary)] text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-[9px] transition-all duration-300 shadow-lg hover:scale-105">
                 Discover Our History
-                <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-500" />
-              </button>
+                <ArrowRight className="w-4 h-4 ml-3" />
+              </Link>
             </div>
           </div>
 

@@ -35,7 +35,7 @@ export default function FAQ() {
         </span>
       </div>
 
-      <h2 className="font-serif text-4xl md:text-5xl text-[var(--color-primary)] font-bold mb-16 leading-tight">
+      <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[var(--color-primary)] font-bold mb-12 leading-tight italic">
         Frequently Asked <br/> Questions.
       </h2>
 
@@ -43,22 +43,22 @@ export default function FAQ() {
         {faqs.map((faq, index) => (
           <div 
             key={index} 
-            className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index ? 'bg-white border-[var(--color-secondary)]/30 shadow-md' : 'bg-transparent border-[var(--color-primary)]/10 hover:border-[var(--color-primary)]/30'}`}
+            className={`border rounded-[2rem] overflow-hidden transition-all duration-500 ${openIndex === index ? 'bg-white border-blue-500/20 shadow-2xl' : 'bg-transparent border-[var(--color-primary)]/10 hover:border-[var(--color-primary)]/30'}`}
           >
             <button 
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+              className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none"
             >
-              <h3 className={`font-serif text-xl md:text-2xl transition-colors ${openIndex === index ? 'text-[var(--color-secondary)] font-bold' : 'text-[var(--color-primary)] font-medium'}`}>
+              <h3 className={`font-serif text-xl md:text-2xl transition-all duration-500 italic ${openIndex === index ? 'text-[var(--color-secondary)] font-bold' : 'text-[var(--color-primary)] font-medium'}`}>
                 {faq.question}
               </h3>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ml-4 transition-colors ${openIndex === index ? 'bg-[var(--color-secondary)] text-white' : 'bg-[var(--color-primary)]/5 text-[var(--color-primary)]'}`}>
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ml-4 transition-all duration-500 ${openIndex === index ? 'bg-[var(--color-secondary)] text-white rotate-180' : 'bg-[var(--color-primary)]/5 text-[var(--color-primary)]'}`}>
                 {openIndex === index ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
               </div>
             </button>
             
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-              <div className="p-6 pt-0 text-gray-600 font-light leading-relaxed">
+            <div className={`overflow-hidden transition-all duration-700 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="p-6 md:p-8 pt-0 text-gray-600 font-light leading-relaxed text-base">
                 {faq.answer}
               </div>
             </div>

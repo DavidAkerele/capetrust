@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -22,7 +21,7 @@ export default function Footer() {
                 placeholder="Enter your email address" 
                 className="bg-white/5 border border-white/20 text-white rounded-full pl-6 pr-32 py-4 w-full focus:outline-none focus:border-[var(--color-secondary)] focus:bg-white/10 transition-all backdrop-blur-md placeholder:text-white/40" 
               />
-              <button className="absolute right-2 top-2 bottom-2 bg-[var(--color-secondary)] hover:bg-white hover:text-[var(--color-primary)] text-white px-6 rounded-full transition-colors font-semibold text-sm tracking-wide flex items-center">
+              <button className="absolute right-2 top-2 bottom-2 bg-[var(--color-secondary)] hover:bg-white hover:text-[var(--color-primary)] text-white px-8 rounded-full transition-all font-bold text-[10px] uppercase tracking-widest flex items-center shadow-lg">
                 Subscribe
               </button>
             </div>
@@ -33,10 +32,10 @@ export default function Footer() {
             <div>
               <h4 className="font-bold text-xs tracking-[0.2em] uppercase mb-6 text-[var(--color-secondary)]">Services</h4>
               <ul className="space-y-4 text-white/70 font-light">
-                <li><Link href="#" className="hover:text-white transition-colors">Traditional Funerals</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Cremation Services</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Cemetery & Burial</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Grief Support</Link></li>
+                <li><Link href="/products" className="hover:text-white transition-colors">Traditional Funerals</Link></li>
+                <li><Link href="/products" className="hover:text-white transition-colors">Cremation Services</Link></li>
+                <li><Link href="/products" className="hover:text-white transition-colors">Cemetery & Burial</Link></li>
+                <li><Link href="/faq" className="hover:text-white transition-colors">Grief Support</Link></li>
               </ul>
             </div>
             
@@ -44,10 +43,10 @@ export default function Footer() {
             <div>
               <h4 className="font-bold text-xs tracking-[0.2em] uppercase mb-6 text-[var(--color-secondary)]">Company</h4>
               <ul className="space-y-4 text-white/70 font-light">
-                <li><Link href="#" className="hover:text-white transition-colors">Our Legacy</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Our Team</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Contact Us</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
+                <li><Link href="/about" className="hover:text-white transition-colors">Our Legacy</Link></li>
+                <li><Link href="/about" className="hover:text-white transition-colors">Our Team</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Careers</Link></li>
               </ul>
             </div>
 
@@ -69,15 +68,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section: Massive Typographic Watermark */}
-        <div className="border-t border-white/10 pt-16 pb-4">
+        <div className="border-t border-white/10 pt-20 pb-4">
           <div className="flex flex-col items-center">
-            <h1 className="text-[14vw] xl:text-[12rem] leading-none font-bold tracking-tighter text-white/5 select-none w-full text-center">
-              CAPETRUST
+            <h1 className="text-[14vw] xl:text-[18rem] leading-none font-serif font-bold tracking-tighter text-white/5 select-none w-full text-center italic">
+              Capetrust
             </h1>
             
-            <div className="w-full flex flex-col md:flex-row justify-between items-center text-sm text-white/40 mt-8 font-light">
+            <div className="w-full flex flex-col md:flex-row justify-between items-center text-[10px] text-white/40 mt-12 font-bold uppercase tracking-[0.2em]">
               <p>&copy; {new Date().getFullYear()} Capetrust Funeral Services.</p>
-              <div className="flex space-x-6 mt-4 md:mt-0">
+              <div className="flex space-x-8 mt-6 md:mt-0">
                 <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
                 <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>
                 <Link href="#" className="hover:text-white transition-colors">Accessibility</Link>

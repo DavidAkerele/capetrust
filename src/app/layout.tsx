@@ -14,6 +14,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://capetrust.ca"),
   title: "Capetrust Funeral Services | Honoring Life & Legacy in Lagos",
   description: "Nigeria's premium funeral, cremation, and cemetery provider. Based in Ikorodu, Lagos, we offer compassionate, dignified care for your loved ones.",
   openGraph: {
