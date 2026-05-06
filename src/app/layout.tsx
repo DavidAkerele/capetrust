@@ -13,6 +13,10 @@ const cormorant = Cormorant_Garamond({
   weight: ["400", "600", "700"],
 });
 
+export const viewport = {
+  themeColor: "#E1EFFF",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://capetrust.ca"),
   title: {
@@ -22,7 +26,6 @@ export const metadata: Metadata = {
   description: "Nigeria's preeminent funeral and memorial provider. We combine heritage with modern clarity to provide families in Lagos with the peace of mind they deserve.",
   keywords: ["Funeral Services Lagos", "Cemetery Nigeria", "Memorial Estates", "Cremation Services", "Grief Support Lagos"],
   authors: [{ name: "Capetrust Editorial" }],
-  themeColor: "#E1EFFF",
   openGraph: {
     title: "Capetrust | Honoring Life & Legacy with Premium Care",
     description: "Nigeria's leading premium funeral and cemetery provider. Discover our tranquil sanctuaries and compassionate, professional services in Lagos.",
