@@ -41,18 +41,18 @@ export function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-3">
-            <label className="text-[10px] font-bold text-[var(--color-primary)]/40 uppercase tracking-[0.25em]">First Name</label>
-            <Input placeholder="John" required className="bg-transparent border-0 border-b border-[var(--color-primary)]/10 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[var(--color-secondary)] transition-all h-14 text-lg placeholder:text-gray-300" />
+            <label className="text-[10px] font-bold text-primary/60 uppercase tracking-[0.25em]">First Name</label>
+            <Input placeholder="John" required className="bg-transparent border-0 border-b border-primary/20 rounded-none px-0 focus-visible:ring-0 focus-visible:border-secondary transition-all h-14 text-lg placeholder:text-primary/40" />
           </div>
           <div className="space-y-3">
-            <label className="text-[10px] font-bold text-[var(--color-primary)]/40 uppercase tracking-[0.25em]">Last Name</label>
-            <Input placeholder="Doe" required className="bg-transparent border-0 border-b border-[var(--color-primary)]/10 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[var(--color-secondary)] transition-all h-14 text-lg placeholder:text-gray-300" />
+            <label className="text-[10px] font-bold text-primary/60 uppercase tracking-[0.25em]">Last Name</label>
+            <Input placeholder="Doe" required className="bg-transparent border-0 border-b border-primary/20 rounded-none px-0 focus-visible:ring-0 focus-visible:border-secondary transition-all h-14 text-lg placeholder:text-primary/40" />
           </div>
         </div>
 
         <div className="space-y-3">
-          <label className="text-[10px] font-bold text-[var(--color-primary)]/40 uppercase tracking-[0.25em]">Email Address</label>
-          <Input type="email" placeholder="john@example.com" required className="bg-transparent border-0 border-b border-[var(--color-primary)]/10 rounded-none px-0 focus-visible:ring-0 focus-visible:border-[var(--color-secondary)] transition-all h-14 text-lg placeholder:text-gray-300" />
+          <label className="text-[10px] font-bold text-primary/60 uppercase tracking-[0.25em]">Email Address</label>
+          <Input type="email" placeholder="john@example.com" required className="bg-transparent border-0 border-b border-primary/20 rounded-none px-0 focus-visible:ring-0 focus-visible:border-secondary transition-all h-14 text-lg placeholder:text-primary/40" />
         </div>
 
         <div className="space-y-3">
@@ -72,11 +72,11 @@ export function ContactForm() {
         </div>
 
         <div className="space-y-3">
-          <label className="text-[10px] font-bold text-[var(--color-primary)]/40 uppercase tracking-[0.25em]">Message</label>
+          <label className="text-[10px] font-bold text-primary/60 uppercase tracking-[0.25em]">Message</label>
           <textarea 
             placeholder="How can we assist you?" 
             required 
-            className="w-full bg-transparent border-0 border-b border-[var(--color-primary)]/10 py-4 text-lg focus:outline-none focus:border-[var(--color-secondary)] transition-all resize-none h-40 placeholder:text-gray-300"
+            className="w-full bg-transparent border-0 border-b border-primary/20 py-4 text-lg focus:outline-none focus:border-secondary transition-all resize-none h-40 placeholder:text-primary/40"
           ></textarea>
         </div>
 

@@ -3,65 +3,55 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-8 md:px-16 lg:px-24 bg-white border-b border-[var(--color-primary)]/10">
-      
-      <div className="flex items-center space-x-4 mb-12">
-        <div className="w-12 h-[2px] bg-[var(--color-secondary)]"></div>
-        <span className="text-[var(--color-secondary)] text-xs font-bold uppercase tracking-[0.15em]">
-          Get in Touch
-        </span>
-      </div>
+    <section id="contact" className="py-32 px-6 md:px-12 lg:px-24 bg-background relative overflow-hidden">
+      {/* Blue Spotlights */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-secondary/10 rounded-full blur-[200px] pointer-events-none"></div>
 
-      <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[var(--color-primary)] font-bold mb-8 leading-tight italic">
-        Schedule a <br/> consultation.
-      </h2>
+      <div className="w-full mx-auto space-y-20 relative z-10">
+        <div className="space-y-6">
+          <span className="inline-block text-[10px] uppercase tracking-[0.3em] font-bold text-secondary">
+            Get in Touch
+          </span>
+          <h2 className="font-serif text-4xl md:text-7xl font-medium leading-tight italic text-primary">
+            Schedule a <br/> consultation.
+          </h2>
+          <p className="text-primary/50 font-light text-xl leading-relaxed max-w-2xl">
+            Whether you are planning ahead as an investment or need immediate assistance, our advisors are here to guide you with compassion.
+          </p>
+        </div>
 
-      <p className="text-gray-600 font-light text-lg leading-relaxed mb-16 max-w-2xl">
-        Whether you are planning ahead as an investment or need immediate assistance, our advisors are here to guide you with compassion.
-      </p>
-
-      <div className="bg-[var(--color-primary)] rounded-[2.5rem] p-10 md:p-16 relative overflow-hidden group shadow-2xl">
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/10 to-transparent z-0 transition-opacity duration-700 opacity-50 group-hover:opacity-100"></div>
-        
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
-          <div>
-            <h3 className="text-3xl font-serif text-white font-bold mb-4 italic">Ready to start planning?</h3>
-            <p className="text-white/70 font-light max-w-md text-lg">Our planning forms are available 24/7. Connect with an advisor today.</p>
-          </div>
+        <div className="bg-white/50 backdrop-blur-md rounded-[3rem] p-12 md:p-20 relative overflow-hidden group shadow-2xl border border-primary/5">
+          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-secondary/20 to-transparent z-0 transition-opacity duration-700 opacity-50 group-hover:opacity-100"></div>
           
-          <Link href="/contact" className="shrink-0 bg-[var(--color-secondary)] hover:bg-white text-white hover:text-[var(--color-primary)] px-10 py-5 rounded-full font-bold uppercase tracking-widest text-[9px] flex items-center transition-all duration-300 transform hover:scale-105 shadow-2xl">
-            Open Inquiry Form
-            <ArrowRight className="w-5 h-5 ml-4" />
-          </Link>
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="space-y-4">
+              <h3 className="text-4xl md:text-5xl font-serif text-primary font-medium italic">Ready to start planning?</h3>
+              <p className="text-primary/60 font-light max-w-md text-xl leading-relaxed">Our planning forms are available 24/7. Connect with an advisor today.</p>
+            </div>
+            
+            <Link href="/contact" className="shrink-0 bg-secondary hover:bg-secondary-hover text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[10px] flex items-center transition-all duration-300 transform hover:scale-105 shadow-2xl">
+              Open Inquiry Form
+              <ArrowRight className="w-5 h-5 ml-4" />
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {[
+            { icon: Phone, label: "Call Us", value: "+234 (0) 800 000 0000" },
+            { icon: Mail, label: "Email Us", value: "consult@capetrust.com" },
+            { icon: MapPin, label: "Visit Us", value: "Ikorodu, Lagos, Nigeria" }
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-start group p-10 rounded-[2.5rem] bg-white/40 border border-primary/5 shadow-sm hover:shadow-xl transition-all duration-500 backdrop-blur-sm">
+              <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-8 group-hover:bg-secondary transition-all duration-500 transform group-hover:rotate-12">
+                <item.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+              </div>
+              <h4 className="font-bold text-2xl text-primary mb-3 italic font-serif">{item.label}</h4>
+              <p className="text-primary/50 font-light text-lg">{item.value}</p>
+            </div>
+          ))}
         </div>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
-        <div className="flex flex-col items-start group p-6 rounded-[1.5rem] bg-white shadow-lg hover:shadow-2xl transition-all duration-500 border border-[var(--color-primary)]/5">
-          <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--color-secondary)] transition-all duration-500 transform group-hover:scale-110">
-            <Phone className="w-5 h-5 text-[var(--color-secondary)] group-hover:text-white transition-colors" />
-          </div>
-          <h4 className="font-bold text-xl text-[var(--color-primary)] mb-2 italic font-serif">Call Us</h4>
-          <p className="text-gray-500 font-light text-sm">+234 (0) 800 000 0000</p>
-        </div>
-        
-        <div className="flex flex-col items-start group p-6 rounded-[1.5rem] bg-white shadow-lg hover:shadow-2xl transition-all duration-500 border border-[var(--color-primary)]/5">
-          <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--color-secondary)] transition-all duration-500 transform group-hover:scale-110">
-            <Mail className="w-5 h-5 text-[var(--color-secondary)] group-hover:text-white transition-colors" />
-          </div>
-          <h4 className="font-bold text-xl text-[var(--color-primary)] mb-2 italic font-serif">Email Us</h4>
-          <p className="text-gray-500 font-light text-sm">consult@capetrust.com</p>
-        </div>
-
-        <div className="flex flex-col items-start group p-6 rounded-[1.5rem] bg-white shadow-lg hover:shadow-2xl transition-all duration-500 border border-[var(--color-primary)]/5">
-          <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[var(--color-secondary)] transition-all duration-500 transform group-hover:scale-110">
-            <MapPin className="w-5 h-5 text-[var(--color-secondary)] group-hover:text-white transition-colors" />
-          </div>
-          <h4 className="font-bold text-xl text-[var(--color-primary)] mb-2 italic font-serif">Visit Us</h4>
-          <p className="text-gray-500 font-light text-sm">Ikorodu, Lagos, Nigeria</p>
-        </div>
-      </div>
-
     </section>
   );
 }

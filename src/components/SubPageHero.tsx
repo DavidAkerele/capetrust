@@ -19,16 +19,16 @@ export function SubPageHero({ title, description, image }: SubPageHeroProps) {
           sizes="100vw"
           className="object-cover" 
         />
-        <div className="absolute inset-0 bg-[var(--color-primary)]/60 z-10 backdrop-blur-[2px]"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-transparent to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-background/80 z-10 backdrop-blur-[2px]"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent z-10"></div>
       </div>
       
       <div className="relative z-20 text-center px-6 max-w-4xl pt-16">
-        <h1 className="font-serif text-5xl md:text-6xl text-white font-bold mb-6 drop-shadow-xl animate-[fadeInUp_1s_ease-out] italic leading-[0.95]">
+        <h1 className="font-serif text-5xl md:text-6xl text-primary font-bold mb-6 animate-[fadeInUp_1s_ease-out] italic leading-[0.95]">
           {title}
         </h1>
-        <div className="w-16 h-[1px] bg-[var(--color-secondary)] mx-auto mb-8 animate-[fadeIn_1.5s_ease-out]"></div>
-        <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed drop-shadow-md animate-[fadeInUp_1.2s_ease-out] max-w-2xl mx-auto">
+        <div className="w-16 h-[1px] bg-secondary mx-auto mb-8 animate-[fadeIn_1.5s_ease-out]"></div>
+        <p className="text-lg md:text-xl text-primary font-light leading-relaxed animate-[fadeInUp_1.2s_ease-out] max-w-2xl mx-auto">
           {description}
         </p>
       </div>

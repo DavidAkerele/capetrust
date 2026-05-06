@@ -15,19 +15,25 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://capetrust.ca"),
-  title: "Capetrust Funeral Services | Honoring Life & Legacy in Lagos",
-  description: "Nigeria's premium funeral, cremation, and cemetery provider. Based in Ikorodu, Lagos, we offer compassionate, dignified care for your loved ones.",
+  title: {
+    default: "Capetrust Funeral Services | A Legacy of Dignity in Lagos",
+    template: "%s | Capetrust Funeral Services"
+  },
+  description: "Nigeria's preeminent funeral and memorial provider. We combine heritage with modern clarity to provide families in Lagos with the peace of mind they deserve.",
+  keywords: ["Funeral Services Lagos", "Cemetery Nigeria", "Memorial Estates", "Cremation Services", "Grief Support Lagos"],
+  authors: [{ name: "Capetrust Editorial" }],
+  themeColor: "#E1EFFF",
   openGraph: {
-    title: "Capetrust Funeral Services",
-    description: "Nigeria's leading premium funeral, cremation, and cemetery provider based in Lagos. We honor every life with dignity and respect.",
+    title: "Capetrust | Honoring Life & Legacy with Premium Care",
+    description: "Nigeria's leading premium funeral and cemetery provider. Discover our tranquil sanctuaries and compassionate, professional services in Lagos.",
     url: "https://capetrust.ca",
     siteName: "Capetrust Funeral Services",
     images: [
       {
-        url: "/images/jacinta-christos-pJ8WXG5C_5U-unsplash.jpg",
+        url: "/images/hero-unsplash.jpg",
         width: 1200,
         height: 630,
-        alt: "Capetrust Funeral Services Legacy",
+        alt: "Capetrust Funeral Services - A Sanctuary of Peace",
       },
     ],
     locale: "en_NG",
@@ -35,9 +41,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Capetrust Funeral Services",
-    description: "Premium compassionate funeral care in Lagos, Nigeria.",
-    images: ["/images/jacinta-christos-pJ8WXG5C_5U-unsplash.jpg"],
+    title: "Capetrust Funeral Services | Premium Care in Lagos",
+    description: "Honoring every life with dignity and modern clarity. Nigeria's leading memorial provider.",
+    images: ["/images/hero-unsplash.jpg"],
+    creator: "@capetrust",
   },
   icons: {
     icon: "/logo.png",

@@ -52,24 +52,24 @@ export default function Products() {
               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110" 
             />
             
-            {/* Gradient Overlay - Darker for readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700"></div>
+            {/* Gradient Overlay - Light Milk Blue for readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-95 group-hover:opacity-100 transition-opacity duration-700"></div>
             
             {/* Content */}
             <div className="absolute inset-0 p-8 flex flex-col justify-end transform transition-transform duration-700 group-hover:-translate-y-2">
-              <h3 className="font-serif text-2xl font-bold text-white mb-4 italic">
+              <h3 className="font-serif text-2xl font-bold text-primary mb-4 italic">
                 {product.title}
               </h3>
               
-              <div className="h-[1px] w-10 bg-[var(--color-secondary)] mb-4 transition-all duration-700 group-hover:w-20"></div>
+              <div className="h-[1px] w-10 bg-secondary mb-4 transition-all duration-700 group-hover:w-20"></div>
               
               <div className="max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 overflow-hidden transition-all duration-700 ease-in-out">
-                <p className="text-white/80 font-light text-sm leading-relaxed pb-6">
+                <p className="text-primary/70 font-light text-sm leading-relaxed pb-6">
                   {product.description}
                 </p>
               </div>
               
-              <Link href="/products" className="inline-flex items-center text-white/90 font-bold text-[9px] uppercase tracking-[0.2em] group-hover:text-[var(--color-secondary)] transition-colors duration-300">
+              <Link href="/products" className="inline-flex items-center text-primary font-bold text-[9px] uppercase tracking-[0.2em] group-hover:text-secondary transition-colors duration-300">
                 Learn More
                 <ArrowRight className="w-3 h-3 ml-2 transform group-hover:translate-x-1.5 transition-transform duration-500" />
               </Link>

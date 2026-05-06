@@ -5,7 +5,7 @@ import legacyImg from "../../public/images/jacinta-christos-pJ8WXG5C_5U-unsplash
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-white relative overflow-hidden">
+    <section id="about" className="py-24 md:py-32 bg-background relative overflow-hidden">
       
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="relative flex flex-col lg:flex-row items-center">
@@ -25,7 +25,7 @@ export default function About() {
 
           {/* Right: Overlapping Glassmorphism Card */}
           <div className="w-full lg:w-1/2 relative z-10 lg:-ml-32 mt-[-100px] lg:mt-0">
-            <div className="bg-white/95 supports-[backdrop-filter]:bg-white/80 backdrop-blur-xl p-10 md:p-16 shadow-2xl rounded-[2.5rem] border border-[var(--color-primary)]/5">
+            <div className="bg-background/95 supports-[backdrop-filter]:bg-background/80 backdrop-blur-xl p-10 md:p-16 shadow-2xl rounded-[2.5rem] border border-[var(--color-primary)]/5">
               
               <div className="flex items-center space-x-4 mb-10">
                 <div className="w-12 h-[1px] bg-[var(--color-secondary)]"></div>
